@@ -50,21 +50,3 @@ class Pet:
                 print(f"- {trick}")
         else:
             print(f"{self.name} doesn't know any tricks yet!")
-
-# Example usage:
-def main():
-    # Create a new pet
-    my_pet = Pet()
-    
-    # Test the methods
-    my_pet.get_status()
-    my_pet.eat()
-    my_pet.play()
-    my_pet.sleep()
-    my_pet.train("sit")
-    my_pet.train("roll over")
-    my_pet.show_tricks()
-    my_pet.get_status()
-
-if __name__ == "__main__":
-    main()
