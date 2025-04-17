@@ -1,30 +1,25 @@
 class Pet:
     def __init__(self):
         self.name = "Simba"
-        self.hunger = 5  # Starting at middle value
-        self.energy = 10  # Starting fully rested
-        self.happiness = 5  # Starting at middle value
-        self.tricks = []  # Empty list to store tricks
+        self.hunger = 5  
+        self.energy = 10  
+        self.happiness = 5  
+        self.tricks = []  
     
     def eat(self):
-        # Reduce hunger by 3 but not below 0
         self.hunger = max(0, self.hunger - 3)
-        # Increase happiness by 1 but not above 10
         self.happiness = min(10, self.happiness + 1)
         print(f"{self.name} has eaten and is feeling better!")
     
     def sleep(self):
-        # Increase energy by 5 but not above 10
         self.energy = min(10, self.energy + 5)
         print(f"{self.name} had a good nap and is feeling energized!")
     
     def play(self):
-        if self.energy >= 2:  # Check if pet has enough energy to play
-            # Decrease energy by 2
+        if self.energy >= 2: 
             self.energy = max(0, self.energy - 2)
-            # Increase happiness by 2 but not above 10
             self.happiness = min(10, self.happiness + 2)
-            # Increase hunger by 1 but not above 10
+     
             self.hunger = min(10, self.hunger + 1)
             print(f"{self.name} had fun playing!")
         else:
@@ -51,12 +46,9 @@ class Pet:
         else:
             print(f"{self.name} doesn't know any tricks yet!")
 
-# Example usage:
+
 def main():
-    # Create a new pet
     my_pet = Pet()
-    
-    # Test the methods
     my_pet.get_status()
     my_pet.eat()
     my_pet.play()
